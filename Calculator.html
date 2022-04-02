@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKTU Semester Percentage Calculator</title>
+</head>
+
+<body>
+    <center>
+            <h2>Semester/Year Percentage Calculator</h2>
+            <input type="number"  id="total" placeholder="Total Marks"> <br><br>
+            <input type="number"  id="obtained" placeholder="Marks Obtained"> <br><br>
+
+            <div id="result" style="height: 20px; width: 100px; border: 1px solid black;">
+
+            </div>
+            <br>
+            <button onclick="myCalculator()"> Calculate </button> <br>
+            
+    </center>
+
+    <script>
+
+        function myCalculator() {
+            var cal1 = document.getElementById("total");
+            var cal2 = document.getElementById("obtained");
+            var res1 = document.getElementById("result");
+            res1 = parseInt(cal2.value*100) / parseInt(cal1.value) ;
+            document.getElementById("result").innerHTML = res1.toFixed(2) + ' %';
+        }
+
+    </script>
+
+
+</body>
+
+</html>
